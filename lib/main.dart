@@ -15,8 +15,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Meus Lugares',
       theme: ThemeData(
-        primaryColor: Colors.indigo,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
+        colorScheme: const ColorScheme(
+          primary: Colors.indigo,
+          secondary: Colors.amber,
+          background: Colors.white,
+          surface: Colors.white,
+          error: Colors.red,
+          onPrimary: Colors.white,
+          onSecondary: Colors.black,
+          onBackground: Colors.black,
+          onSurface: Colors.black,
+          onError: Colors.white,
+          brightness: Brightness.light,
+        ),
         useMaterial3: true,
       ),
       home: const PlacesListScreen(),
